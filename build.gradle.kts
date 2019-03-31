@@ -23,6 +23,7 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
     compile("io.ktor:ktor-server-netty:$ktor_version")
+    compile("io.ktor:ktor-auth:$ktor_version")
     compile("ch.qos.logback:logback-classic:1.2.1")
     testImplementation("junit:junit:4.12")
     testCompile ("org.jboss.shrinkwrap:shrinkwrap-impl-base:1.2.6")
