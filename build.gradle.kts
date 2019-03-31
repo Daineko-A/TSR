@@ -10,6 +10,7 @@ version = "1.0-SNAPSHOT"
 
 val ktor_version = "1.1.3"
 val kotlin_version = "1.3.21"
+val exposed_version = "0.13.5"
 
 application {
     mainClassName = "io.ktor.server.netty.EngineMain"
@@ -24,6 +25,9 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
     compile("io.ktor:ktor-server-netty:$ktor_version")
     compile("io.ktor:ktor-auth:$ktor_version")
+    compile("io.ktor:ktor-jackson:$ktor_version")
+    compile("org.jetbrains.exposed:exposed:$exposed_version")
+    compile("org.xerial:sqlite-jdbc:3.27.2.1")
     compile("ch.qos.logback:logback-classic:1.2.1")
     testImplementation("junit:junit:4.12")
     testCompile ("org.jboss.shrinkwrap:shrinkwrap-impl-base:1.2.6")
