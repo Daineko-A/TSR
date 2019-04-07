@@ -3,7 +3,7 @@ package dao.DBConnector
 import org.jetbrains.exposed.sql.Database
 import java.io.File
 
-object  DatabaseFactory{
+object DatabaseFactory {
     val dbPath = "dao" + File.separator + "database" + File.separator
     val dbName = "TSR.db"
     val dbFullName = dbPath + dbName
