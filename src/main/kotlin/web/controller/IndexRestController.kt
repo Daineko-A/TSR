@@ -5,8 +5,7 @@ import io.ktor.features.CallLogging
 import io.ktor.features.DefaultHeaders
 import io.ktor.http.ContentType
 import io.ktor.response.respondText
-import io.ktor.routing.Routing
-import io.ktor.routing.get
+import io.ktor.routing.*
 
 
 fun Application.main() {
@@ -15,6 +14,22 @@ fun Application.main() {
     install(Routing) {
         get("/") {
             call.respondText("Hello World!", ContentType.Text.Html)
+        }
+
+        get("/createNewWeek") {
+
+        }
+
+        post("/fillWeek"){
+
+        }
+
+        put("/updateWeek"){
+
+        }
+
+        delete("/deleteWeek"){
+
         }
     }
 }
