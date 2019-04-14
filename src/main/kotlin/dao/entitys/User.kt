@@ -12,7 +12,7 @@ data class User(
 
 object Users : Table() {
     val id = long("id").primaryKey().autoIncrement()
-    val firstName = varchar("firstname", 255)
-    val lastName = varchar("lastname", 255)
-    val accountName = varchar("accountName", 255)
+    val firstName = varchar("first_name", 255)
+    val lastName = varchar("last_name", 255)
+    val accountName = varchar("account_name", 255)
 }
