@@ -1,14 +1,26 @@
 package dao.DBConnector
 
+import com.zaxxer.hikari.HikariConfig
+import com.zaxxer.hikari.HikariDataSource
 import org.jetbrains.exposed.sql.Database
 import java.io.File
 
 object DatabaseFactory {
-    val dbPath = "dao" + File.separator + "database" + File.separator
-    val dbName = "TSR.db"
-    val dbFullName = dbPath + dbName
+    private val dbPath = "." + File.separator
+    private val dbName = "TSR.db"
+    private val dbFullName = dbPath + dbName
 
-    fun initDB() {
-        Database.connect("jdbc:sqlite:$dbFullName", "org.sqlite.JDBC")
+    private fun sourceDB(): HikariDataSource {
+        val config = HikariConfig()
+        config.driverClassName = "org.sqlite.JDBC"
+        config.jdbcUrl = "jdbc:sqlite:$dbFullName"
+        config.transactionIsolation = "TRANSACTION_SERIALIZABLE"
+
+        config.validate()
+        return HikariDataSource(config)
+    }
+
+    fun connect() {
+        Database.connect(sourceDB())
     }
 }

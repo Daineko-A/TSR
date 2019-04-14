@@ -30,6 +30,7 @@ dependencies {
     compile("io.ktor:ktor-jackson:$ktor_version")
     compile("org.jetbrains.exposed:exposed:$exposed_version")
     compile("org.xerial:sqlite-jdbc:3.27.2.1")
+    compile("com.zaxxer:HikariCP:$hikari_version")
     compile("ch.qos.logback:logback-classic:1.2.1")
     testImplementation("junit:junit:4.12")
     testCompile ("org.jboss.shrinkwrap:shrinkwrap-impl-base:1.2.6")
