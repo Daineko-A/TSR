@@ -20,7 +20,8 @@ object DatabaseFactory {
         return HikariDataSource(config)
     }
 
-    fun connect() {
-        Database.connect(sourceDB())
+    fun connect(): Database {
+        return Database.connect(sourceDB())
     }
+
 }
