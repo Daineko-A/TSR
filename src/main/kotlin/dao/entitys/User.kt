@@ -4,11 +4,11 @@ import dao.entitys.common.BaseEntity
 import org.jetbrains.exposed.sql.Table
 
 data class User(
-    override val id: Long,
+    val id: Long,
     val firstName: String,
     val lastName: String,
     val accountName: String
-) : BaseEntity() {}
+)
 
 object Users : Table() {
     val id = long("id").primaryKey().autoIncrement()

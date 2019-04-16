@@ -14,7 +14,7 @@ class UserService {
         DatabaseFactory.connect()
 
         val jamesList = transaction {
-            Users.selectAll().limit(10)
+            Users.selectAll()
         }
 
         return jamesList.first()
