@@ -8,9 +8,8 @@ plugins {
 group = "by.ploskiy"
 version = "1.0-SNAPSHOT"
 
-val ktor_version = "1.1.3"
+val ktor_version = "1.1.4"
 val kotlin_version = "1.3.21"
-val exposed_version = "0.13.6"
 val hikari_version = "2.7.1"
 
 application {
@@ -28,7 +27,7 @@ dependencies {
     compile("io.ktor:ktor-server-netty:$ktor_version")
     compile("io.ktor:ktor-auth:$ktor_version")
     compile("io.ktor:ktor-jackson:$ktor_version")
-    compile("org.jetbrains.exposed:exposed:$exposed_version")
+    compile("org.jooq:jooq:3.11.11")
     compile("org.xerial:sqlite-jdbc:3.27.2.1")
     compile("com.zaxxer:HikariCP:$hikari_version")
     compile("ch.qos.logback:logback-classic:1.2.1")
